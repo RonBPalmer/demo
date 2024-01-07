@@ -3,6 +3,7 @@
 //404 router
 //this is middleware for 404 response to check for and resolve known uri errors
 include '../includes.php';
+//header() fails if there are any echo statements in the code. Adding ob_start() at the top of the file fixes this error.
 ob_start();
 
 //get the slug list from text file as string
