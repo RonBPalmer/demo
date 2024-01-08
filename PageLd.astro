@@ -1,0 +1,29 @@
+---
+const { title, description, canonical } = Astro.props;
+
+const ldString = `
+
+		type='application/ld+json'>
+			'@context': 'http://schema.org',
+			'@type': 'WebPage',
+			name: ${title},
+			url: ${canonical},
+			description: ${description},
+			specialty: 'Constitutional Law as it applies to Divorce & Child Custody',
+			publisher: {
+				'@type': 'Organization',
+				name: 'Fix Family Courts a division of Constitutional Scholars Inc.',
+				legalName: 'Constitutional Scholars Inc.',
+			},
+			author: {
+				'@type': 'Person',
+				name: 'Ron B Palmer',
+				image: 'https://images.fixfamilycourts.com/pages/about-us-pages/ron-b-palmerron-b-palmer-author-2-800-1120.webp',
+				url: 'https://www.fixfamilycourts.com/about-us-pages/about-ron-b-palmer/',
+			},
+		
+	
+    `;
+---
+
+<script set:html={ldString} />
