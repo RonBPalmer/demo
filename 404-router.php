@@ -106,4 +106,4 @@ if ($wpUploads == TRUE) {
     }
 </style>
 
-</html>
+</html> 
